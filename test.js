@@ -94,132 +94,6 @@ result.addEventListener("click", function() {
     answerN(x = buttonN, y = arr1);
     insert(arr1);
 });
- 
-function insert(arr1) {
-
-    if (arr1[0] == true && arr1[1] == true && arr1[2] == true && arr1[3] == true) { 
-          bName.innerHTML = "Ichnusa";
-          btype.innerHTML = "Lager";
-          btaste.innerHTML = "Leggermente amaro";
-          bcolor.innerHTML = "Dorata";
-          bgrad.innerHTML = "4,7 %";
-          bImg.style.backgroundImage = "url(img/Birre/Ichnusa.png)";
-        } else if (arr1[0] == true && arr1[1] == true && arr1[2] == true && arr1[3] == false) { 
-            bName.innerHTML = "Tennent's Super";
-            btype.innerHTML = "Strong Lager";
-            btaste.innerHTML = "Dolce, ma robusto";
-            bcolor.innerHTML = "Giallo intenso";
-            bgrad.innerHTML = "9 %";
-            bImg.style.backgroundImage = "url(img/Birre/Tennents.png)";
-          } else if (arr1[0] == true && arr1[1] == true && arr1[2] == false && arr1[3] == true) { 
-            bName.innerHTML = "Franziskaner Weiss Dunkel";
-            btype.innerHTML = "Dunkel";
-            btaste.innerHTML = "Note raffinate di pane fresco, noci e caramello";
-            bcolor.innerHTML = "Ambrata scura";
-            bgrad.innerHTML = "4,6 %";
-            bImg.style.backgroundImage = "url(img/Birre/Franziskaner_Weiss_Dunkel.png)";
-          } else if (arr1[0] == true && arr1[1] == false && arr1[2] == true && arr1[3] == true) { 
-            bName.innerHTML = "Pedavena Dolomiti";
-          btype.innerHTML = "Pils";
-          btaste.innerHTML = "Rotondo, con note floreali";
-          bcolor.innerHTML = "Chiara";
-          bgrad.innerHTML = "4,9 %";
-          bImg.style.backgroundImage = "url(img/Birre/Pedavena.png)";
-          } else if (arr1[0] == true && arr1[1] == true && arr1[2] == false && arr1[3] == false) { 
-            bName.innerHTML = "Moretti rossa";
-          btype.innerHTML = "Bock";
-          btaste.innerHTML = "Morbido, con note di caramello e liquirizia";
-          bcolor.innerHTML = "Ambrata";
-          bgrad.innerHTML = "7,2 %";
-          bImg.style.backgroundImage = "url(img/Birre/Moretti_rossa.jpeg)";
-          } else if (arr1[0] == true && arr1[1] == false && arr1[2] == true && arr1[3] == false) { 
-            bName.innerHTML = "Leffe Blonde";
-          btype.innerHTML = "Pale Ale";
-          btaste.innerHTML = "Biscottosa e saporita";
-          bcolor.innerHTML = "Dorata";
-          bgrad.innerHTML = "6,7 %";
-          bImg.style.backgroundImage = "url(img/Birre/Leffe.png)";
-          } else if (arr1[0] == true && arr1[1] == false && arr1[2] == false && arr1[3] == true) { 
-            bName.innerHTML = "Peroni rossa Gran Riserva";
-          btype.innerHTML = "Vienna Style";
-          btaste.innerHTML = "Leggero, con lievi note di caramello";
-          bcolor.innerHTML = "Rosso rubino";
-          bgrad.innerHTML = "5,2 %";
-          bImg.style.backgroundImage = "url(img/Birre/Peroni_gran_riserva.png)";
-          } else if (arr1[0] == true && arr1[1] == false && arr1[2] == false && arr1[3] == false) { 
-            bName.innerHTML = "Grimbergen Double Ambrée";
-          btype.innerHTML = "Birra d'abbazia";
-          btaste.innerHTML = "Vago retrogusto torrefatto";
-          bcolor.innerHTML = "Dorata";
-          bgrad.innerHTML = "6,5 %";
-          bImg.style.backgroundImage = "url(img/Birre/Grimbergen.png)";
-          } else if (arr1[0] == false && arr1[1] == false && arr1[2] == false && arr1[3] == false) { 
-            bName.innerHTML = "Chimay bleue";
-          btype.innerHTML = "Strong Ale";
-          btaste.innerHTML = "Fruttata e speziata";
-          bcolor.innerHTML = "Scura";
-          bgrad.innerHTML = "9 %";
-          bImg.style.backgroundImage = "url(img/Birre/Chimay.png)";
-          } else if (arr1[0] == false && arr1[1] == false && arr1[2] == false && arr1[3] == true) { 
-            bName.innerHTML = "O'hara's Irish red";
-          btype.innerHTML = "Ale";
-          btaste.innerHTML = "Corposo e fruttato";
-          bcolor.innerHTML = "Ambrata";
-          bgrad.innerHTML = "4,3 %";
-          bImg.style.backgroundImage = "url(img/Birre/OHaraS.png)";
-          } else if (arr1[0] == false && arr1[1] == false && arr1[2] == true && arr1[3] == false) { 
-            bName.innerHTML = "Duvel";
-          btype.innerHTML = "Strong Ale";
-          btaste.innerHTML = "Aromi fruttati e floreali, note speziate di lievito";
-          bcolor.innerHTML = "Dorata";
-          bgrad.innerHTML = "8,5 %";
-          bImg.style.backgroundImage = "url(img/Birre/Duvel.png)";
-          } else if (arr1[0] == false && arr1[1] == true && arr1[2] == false && arr1[3] == false) { 
-            bName.innerHTML = "Cères Red Erik";
-          btype.innerHTML = "Doppio malto";
-          btaste.innerHTML = "Aroma di frutta, malto e caramello";
-          bcolor.innerHTML = "Rossa";
-          bgrad.innerHTML = "6,5 %";
-          bImg.style.backgroundImage = "url(img/Birre/CeresRed.png)";
-          } else if (arr1[0] == false && arr1[1] == false && arr1[2] == true && arr1[3] == true) { 
-            bName.innerHTML = "Brewdog Punk Ipa";
-          btype.innerHTML = "Ipa";
-          btaste.innerHTML = "Note caramellate e retrogusto di luppoli";
-          bcolor.innerHTML = "Bionda";
-          bgrad.innerHTML = "5 %";
-          bImg.style.backgroundImage = "url(img/Birre/Punk_ipa.png)";
-          } else if (arr1[0] == false && arr1[1] == true && arr1[2] == true && arr1[3] == false) { 
-            bName.innerHTML = "Cères Strong Ale";
-          btype.innerHTML = "Strong Ale";
-          btaste.innerHTML = "Ricco e intenso con sentori di malto";
-          bcolor.innerHTML = "Dorata";
-          bgrad.innerHTML = "7,7 %";
-          bImg.style.backgroundImage = "url(img/Birre/Ceres.png)";
-          } else if (arr1[0] == false && arr1[1] == true && arr1[2] == false && arr1[3] == true) { 
-            bName.innerHTML = "Guinness Drought Stout";
-          btype.innerHTML = "Stout";
-          btaste.innerHTML = "Intenso retrogusto di malto e caffè";
-          bcolor.innerHTML = "Scura";
-          bgrad.innerHTML = "4,2 %";
-          bImg.style.backgroundImage = "url(img/Birre/Guinnes_Drought_Stout.png)";
-          } else if (arr1[0] == false && arr1[1] == true && arr1[2] == true && arr1[3] == true) { 
-            bName.innerHTML = "Carlsberg Pilsner";
-          btype.innerHTML = "Lager";
-          btaste.innerHTML = "Aromi erbacei e resinosi";
-          bcolor.innerHTML = "Chiara";
-          bgrad.innerHTML = "5 %";
-          bImg.style.backgroundImage = "url(img/Birre/Carlsberg.png)";
-          } else if (arr1[0] == null || arr1[1] == null || arr1[2] == null || arr1[3] == null) {
-            bName.style.fontSize = "1.2em";
-            bName.innerHTML = "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te";
-          btype.innerHTML = "n/d";
-          btaste.innerHTML = "n/d";
-          bcolor.innerHTML = "n/d";
-          bgrad.innerHTML = "n/d";
-          bImg.style.backgroundImage = "url(img/Birre/Birra_vuota.png)";
-
-          }
-}
 
 close.addEventListener("click", function() {
     yepA.classList.remove("btOn")
@@ -372,14 +246,58 @@ var birre = [
     gradazione: "5 %",
     immagine: "url(img/Birre/Carlsberg.png)"
   },
-  {
-    nome: "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te",
-    tipo: "n/d",
-    gusto: "n/d",
-    colore: "n/d",
-    gradazione: "n/d",
-    immagine: "url(img/Birre/Birra_vuota.png)"
-  },
-  
 ]
 
+function fillModal(index) {
+  bName.innerHTML = birre[index].nome
+  btype.innerHTML = birre[index].tipo
+  btaste.innerHTML = birre[index].gusto
+  bcolor.innerHTML = birre[index].colore
+  bgrad.innerHTML = birre[index].gradazione
+  bImg.style.backgroundImage = birre[index].immagine
+}
+
+function insert(arr1) {
+
+  if (arr1[0] == true && arr1[1] == true && arr1[2] == true && arr1[3] == true) { 
+        fillModal(0)
+      } else if (arr1[0] == true && arr1[1] == true && arr1[2] == true && arr1[3] == false) { 
+        fillModal(1)
+      } else if (arr1[0] == true && arr1[1] == true && arr1[2] == false && arr1[3] == true) { 
+        fillModal(2)
+      } else if (arr1[0] == true && arr1[1] == false && arr1[2] == true && arr1[3] == true) { 
+        fillModal(3)
+      } else if (arr1[0] == true && arr1[1] == true && arr1[2] == false && arr1[3] == false) { 
+        fillModal(4)
+      } else if (arr1[0] == true && arr1[1] == false && arr1[2] == true && arr1[3] == false) { 
+        fillModal(5)
+      } else if (arr1[0] == true && arr1[1] == false && arr1[2] == false && arr1[3] == true) { 
+        fillModal(6)
+      } else if (arr1[0] == true && arr1[1] == false && arr1[2] == false && arr1[3] == false) { 
+        fillModal(7)
+      } else if (arr1[0] == false && arr1[1] == false && arr1[2] == false && arr1[3] == false) { 
+        fillModal(8)
+      } else if (arr1[0] == false && arr1[1] == false && arr1[2] == false && arr1[3] == true) { 
+        fillModal(9)
+      } else if (arr1[0] == false && arr1[1] == false && arr1[2] == true && arr1[3] == false) { 
+        fillModal(10)
+      } else if (arr1[0] == false && arr1[1] == true && arr1[2] == false && arr1[3] == false) { 
+        fillModal(11)
+      } else if (arr1[0] == false && arr1[1] == false && arr1[2] == true && arr1[3] == true) { 
+        fillModal(12)
+      } else if (arr1[0] == false && arr1[1] == true && arr1[2] == true && arr1[3] == false) { 
+        fillModal(13)
+      } else if (arr1[0] == false && arr1[1] == true && arr1[2] == false && arr1[3] == true) { 
+        fillModal(14)
+      } else if (arr1[0] == false && arr1[1] == true && arr1[2] == true && arr1[3] == true) { 
+        fillModal(15)
+      } else if (arr1[0] == null || arr1[1] == null || arr1[2] == null || arr1[3] == null) {
+      bName.style.fontSize = "1.2em";
+      bName.innerHTML = "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te";
+      btype.innerHTML = "n/d";
+      btaste.innerHTML = "n/d";
+      bcolor.innerHTML = "n/d";
+      bgrad.innerHTML = "n/d";
+      bImg.style.backgroundImage = "url(img/Birre/Birra_vuota.png)";
+      }
+}
