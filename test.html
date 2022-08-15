@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer test</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="https://kit.fontawesome.com/9748229973.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a name="inizio"></a>
+    <div class="header">
+        <div class="blanchet"></div>
+        <div class="container">Vuoi una birra dal gusto morbido o intenso?<div class="btns"><button class="yep" id="yepa">morbido</button><button class="nope" id="nopa">intenso</button></div></div>
+        <div class="container">Vuoi una birra comune o raffinata?<div class="btns"><button class="yep" id="yepb">comune</button><button class="nope" id="nopb">raffinata</button></div></div>
+        <div class="container">Preferisci una birra chiara o scura?<div class="btns"><button class="yep" id="yepc">chiara</button><button class="nope" id="nopc">scura</button></div></div>
+        <div class="container">Vuoi una birra a bassa o alta gradazione?<div class="btns"><button class="yep" id="yepd">bassa</button><button class="nope" id="nopd">alta</button></div></div>
+        <button class="result" id="result"><i class="fa-solid fa-beer-mug-empty"></i></button>
+        <div class="beer" id="beer">
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="beer-img"></div>
+            <p class="beer-name">Nome Birra</p>
+            <div class="beer-description">
+                <table class="beer-table1">
+                    <tr>
+                        <th><div class="property">Tipologia</div></th>
+                        <th><div class="property">Gusto</div></th>
+                    </tr>
+                    <tr>
+                        <td><p class="typo"></p></td>
+                        <td><p class="taste"></p></td>
+                    </tr>
+                </table>
+                <table class="beer-table2">
+                    <tr>
+                        <th><div class="property">Colore</div></th>
+                        <th><div class="property">Gradazione</div></th>
+                    </tr>
+                    <tr>
+                        <td><p class="color">Dorato</p></td>
+                        <td><p class="grad">4,7%</p></td>
+                    </tr>
+                </table>
+                <table class="beer-table1mob">
+                    <tr><th><div class="property">Tipologia</div></th></tr>
+                    <tr><td><p class="typo"></p></td></tr>
+                    <tr><th><div class="property">Gusto</div></th></tr>
+                    <tr><td><p class="taste"></p></td></tr>
+                <table class="beer-table2mob">
+                    <tr><th><div class="property">Colore</div></th></tr>
+                    <tr><td><p class="color">Dorato</p></td></tr>
+                    <tr><th><div class="property">Gradazione</div></th></tr>
+                    <tr><td><p class="grad">4,7%</p></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="blanket"></div>
+</body>
+<script src="test.js"></script>
+</html>

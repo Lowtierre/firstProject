@@ -1,0 +1,557 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    position: absolute;
+    margin: 0;
+}
+
+/* header */
+
+.header {
+    width: 100vw;
+    position: absolute;
+    background-image: url(img/Hop.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    background-attachment: fixed;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:flex;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+    -webkit-justify-content:center;
+    justify-content:center;
+    align-items: center;
+    overflow: overlay;
+}
+
+.blanchet{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: #d9eadc;
+    opacity: 0.7;
+}
+
+.blanket{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    background: rgb(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+/* scrollbar */
+
+
+::-webkit-scrollbar{
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #d9eadc;
+    border-radius: 1.2em;
+}
+
+/* container */
+
+.container {
+    height: 1em;
+    margin: 2em auto;
+    padding: 2em 2em 2em 2em;
+    background: none;
+    color: #175541;
+    border-radius: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+}
+
+/* buttons */
+
+.btns {
+    position: relative;
+    margin: auto;
+    margin-top: 6em;
+    width: 15em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.yep {
+    height: 4em;
+    width: 6.5em;
+    background: #175541;
+    border: none;
+    border-radius: 1em;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.6em;
+    text-transform: uppercase;
+}
+
+.nope {
+    height: 4em;
+    width: 6.5em;
+    background: #175541;
+    border: none;
+    border-radius: 1em;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.6em;
+    text-transform: uppercase;
+}
+
+.yep:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    color: #175541;
+    transition: all ease 0.7s;
+}
+
+.nope:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    color: #175541;
+    transition: all ease 0.7s;
+}
+
+.btOn {
+    background: #d9eadc;
+    color: #175541;
+    transition: all ease 0.2s;
+}
+
+.result {
+    height: 6em;
+    width: 8em;
+    margin-top: 6em;
+    margin-bottom: 10em;
+    background: #175541;
+    border: none;
+    border-radius: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    z-index: 1;
+}
+
+.fa-beer-mug-empty{
+    color: aliceblue;
+    font-size: 2em;
+}
+
+.result:hover{
+    cursor: pointer;
+
+}
+
+/* Beer panel */
+
+.beer {
+    position: fixed;
+    margin-bottom: 48em;
+    height: 90vh;
+    width: 40vw;
+    background: rgba(255, 255, 255);
+    box-shadow: 1em 1em 2em rgb(0,0,0,0.8);
+    border-radius: 3em 0 ;
+    display:none;
+    z-index: 2;
+}
+
+.close{
+    position: relative;
+    top: 2%;
+    left:98%;
+    transform: translateX(-100%);
+    background: none;
+    border: none;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.fa-xmark{
+    color: rgb(0,0,0,0.7);
+    font-size: 2.1em;
+}
+
+.beer-img{
+    position: relative;
+    margin: 3em auto 2em auto;
+    height: 40%;
+    width: 50%;
+    background-size: contain;
+    background-position: center;
+}
+
+.beer-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.beer-description {
+    margin: auto;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+}
+
+.beer-table1 {
+    margin: 1em auto;
+    width: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    border: collapse;
+    text-align: center;
+}
+
+.beer-table2 {
+    margin: auto;
+    width: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    border: collapse;
+    text-align: center;
+}
+
+.beer-table1mob {
+    display: none;
+}
+
+.beer-table2mob {
+    display: none;
+}
+
+th {
+    width:50%;
+    padding: 0.4em 1.5em;
+}
+
+.property{
+    border-bottom: 0.1em solid;
+}
+
+td {
+    padding: 0.4em;
+}
+
+p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media (max-width: 425px) {
+    html {
+        overflow-x:hidden;
+        overflow-y:hidden;
+    }
+    
+    body {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* header */
+    
+    .header {
+        position: relative;
+        height: 100%;
+        background-image: url(img/Hop.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: cover;
+        background-attachment: fixed;
+        display:-webkit-flex;
+        display:-moz-flex;
+        display:-ms-flex;
+        display:flex;
+        -webkit-flex-direction:column;
+        flex-direction:column;
+        -webkit-justify-content:center;
+        justify-content:space-between;
+        align-items: center;
+        overflow: overlay;
+    }
+    
+    .blanchet{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100%;
+        background: #d9eadc;
+        opacity: 0.7;
+    }
+    
+    .blanket{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left:0;
+        display: none;
+        background: rgb(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+    
+    /* scrollbar */
+    
+    
+    ::-webkit-scrollbar{
+        background: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background: #d9eadc;
+        border-radius: 1.2em;
+    }
+    
+    /* container */
+    
+    .container {
+        width:100%;
+        height:fit-content;
+        margin: auto;
+        padding: 1.3em 0;
+        background: none;
+        color: #175541;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    /* buttons */
+    
+    .btns {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .yep {
+        height: 3.5em;
+        width: 100%;
+        background: none;
+        border: 1px solid #175541;
+        border-bottom: none;
+        border-radius: 0;
+        color: #175541;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 0.6em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .nope {
+        height: 3.5em;
+        width: 100%;
+        background: none;
+        border: 1px solid #175541;
+        border-radius: 0;
+        color: #175541;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 0.6em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .yep:hover{
+        cursor: pointer;
+        background: #175541;
+        color: aliceblue;
+        transition: all ease 0.7s;
+    }
+    
+    .nope:hover{
+        cursor: pointer;
+        background: #175541;
+        color: aliceblue;
+        transition: all ease 0.7s;
+    }
+    
+    .btOn {
+        background: #ceffd7;
+        color: #175541;
+        transition: all ease 0.2s;
+    }
+    
+    .result {
+        height: 6em;
+        width: 8em;
+        background: #175541;
+        border: none;
+        border-radius: 1em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 10px;
+        z-index: 1;
+    }
+    
+    .fa-beer-mug-empty{
+        color: aliceblue;
+        font-size: 2em;
+    }
+    
+    .result:hover{
+        cursor: pointer;
+    
+    }
+    
+    /* Beer panel */
+    
+    .beer {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255);
+        border-radius: 0;
+        display:none;
+        z-index: 2;
+    }
+    
+    .close{
+        position: relative;
+        top: 3%;
+        left:94%;
+        transform: translateX(-100%);
+        background: none;
+        border: none;
+    }
+    
+    .close:hover{
+        cursor: pointer;
+    }
+    
+    .fa-xmark{
+        color: rgb(0,0,0,0.7);
+        font-size: 2.1em;
+    }
+    
+    .beer-img{
+        position: relative;
+        margin: 2em auto 1em auto;
+        height: 40%;
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .beer-name {
+        margin: 0 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    
+    .beer-description {
+        margin: auto;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .beer-table1 {
+        margin: 1em auto;
+        width: 80%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1em;
+        border: collapse;
+        text-align: center;
+        display: none;
+    }
+    
+    .beer-table2 {
+        margin: auto;
+        width: 80%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1em;
+        border: collapse;
+        text-align: center;
+        display:none;
+    }
+
+    .beer-table1mob {
+        display: block;
+        text-align: center;
+    }
+    
+    .beer-table2mob {
+        display: block;
+        text-align: center;
+    }
+
+    tr{
+        width: 100%;
+    }
+
+    th {
+        width:100%;
+        padding: 0.4em 1em;
+    }
+    
+    .property{
+        border-bottom: 0.05em solid;
+    }
+    
+    td {
+        padding: 0.4em;
+    }
+    
+    p {
+        margin: 0;
+    }
+  }
+
+@media (max-width: 375px) {
+    .container {
+      background: #bee1e6;
+    }
+  }
