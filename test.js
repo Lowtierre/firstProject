@@ -242,3 +242,144 @@ close.addEventListener("click", function() {
       behavior: "smooth"
     });
 });
+
+var birre = [
+  {
+    nome: "Ichnusa",
+    tipo: "Lager",
+    gusto:"Leggermente amaro",
+    colore: "Dorata",
+    gradazione: "4,7%",
+    immagine: "url(img/Birre/Ichnusa.png)"
+  },
+  {
+    nome: "Tennent's Super",
+    tipo: "Strong Lager",
+    gusto: "Dolce, ma robusto",
+    colore: "Giallo intenso",
+    gradazione: "9 %",
+    immagine: "url(img/Birre/Tennents.png)"
+  },
+  {
+    nome: "Franziskaner Weiss Dunkel",
+    tipo: "Dunkel",
+    gusto: "Note raffinate di pane fresco, noci e caramello",
+    colore: "Ambrata scura",
+    gradazione: "4,6 %",
+    immagine: "url(img/Birre/Franziskaner_Weiss_Dunkel.png)"
+  },
+  {
+    nome: "Pedavena Dolomiti",
+    tipo: "Pils",
+    gusto: "Rotondo, con note floreali",
+    colore: "Chiara",
+    gradazione: "4,9 %",
+    immagine: "url(img/Birre/Pedavena.png)"
+  },
+  {
+    nome: "Moretti rossa",
+    tipo: "Bock",
+    gusto: "Morbido, con note di caramello e liquirizia",
+    colore: "Ambrata",
+    gradazione: "7,2 %",
+    immagine: "url(img/Birre/Moretti_rossa.jpeg)"
+  },
+  {
+    nome: "Leffe Blonde",
+    tipo: "Pale Ale",
+    gusto: "Biscottosa e saporita",
+    colore: "Dorata",
+    gradazione: "6,7 %",
+    immagine: "url(img/Birre/Leffe.png)"
+  },
+  {
+    nome: "Peroni rossa Gran Riserva",
+    tipo: "Vienna Style",
+    gusto: "Leggero, con lievi note di caramello",
+    colore: "Rosso rubino",
+    gradazione: "5,2 %",
+    immagine: "url(img/Birre/Peroni_gran_riserva.png)"
+  },
+  {
+    nome: "Grimbergen Double Ambrée",
+    tipo: "Birra d'abbazia",
+    gusto: "Vago retrogusto torrefatto",
+    colore: "Dorata",
+    gradazione: "6,5 %",
+    immagine: "url(img/Birre/Grimbergen.png)"
+  },
+  {
+    nome: "Chimay bleue",
+    tipo: "Strong Ale",
+    gusto: "Fruttata e speziata",
+    colore: "Scura",
+    gradazione: "9 %",
+    immagine: "url(img/Birre/Chimay.png)"
+  },
+  {
+    nome: "O'hara's Irish red",
+    tipo: "Ale",
+    gusto: "Corposo e fruttato",
+    colore: "Ambrata",
+    gradazione: "4,3 %",
+    immagine: "url(img/Birre/OHaraS.png)"
+  },
+  {
+    nome: "Duvel",
+    tipo: "Strong Ale",
+    gusto: "Aromi fruttati e floreali, note speziate di lievito",
+    colore: "Dorata",
+    gradazione: "8,5 %",
+    immagine: "url(img/Birre/Duvel.png)"
+  },
+  {
+    nome: "Cères Red Erik",
+    tipo: "Doppio malto",
+    gusto: "Aroma di frutta, malto e caramello",
+    colore: "Rossa",
+    gradazione: "6,5 %",
+    immagine: "url(img/Birre/CeresRed.png)"
+  },
+  {
+    nome: "Brewdog Punk Ipa",
+    tipo: "Ipa",
+    gusto: "Note caramellate e retrogusto di luppoli",
+    colore: "Bionda",
+    gradazione: "5 %",
+    immagine: "url(img/Birre/Punk_ipa.png)"
+  },
+  {
+    nome: "Cères Strong Ale",
+    tipo: "Strong Ale",
+    gusto: "Ricco e intenso con sentori di malto",
+    colore: "Dorata",
+    gradazione: "7,7 %",
+    immagine: "url(img/Birre/Ceres.png)"
+  },
+  {
+    nome: "Guinness Drought Stout",
+    tipo: "Stout",
+    gusto: "Intenso retrogusto di malto e caffè",
+    colore: "Scura",
+    gradazione: "4,2 %",
+    immagine: "url(img/Birre/Guinnes_Drought_Stout.png)"
+  },
+  {
+    nome: "Carlsberg Pilsner",
+    tipo: "Lager",
+    gusto: "Aromi erbacei e resinosi",
+    colore: "Chiara",
+    gradazione: "5 %",
+    immagine: "url(img/Birre/Carlsberg.png)"
+  },
+  {
+    nome: "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te",
+    tipo: "n/d",
+    gusto: "n/d",
+    colore: "n/d",
+    gradazione: "n/d",
+    immagine: "url(img/Birre/Birra_vuota.png)"
+  },
+  
+]
+
