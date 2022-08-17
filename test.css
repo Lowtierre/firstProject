@@ -7,6 +7,15 @@ body {
     margin: 0;
 }
 
+.formDiv {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/beerBalls.jpg);
+    background-size: 260%;
+    background-position: center 55%;
+    z-index: 0;
+}
+
 /* header */
 
 .header {
@@ -47,7 +56,7 @@ body {
     left:0;
     display: none;
     background: rgb(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 2;
   }
 
 /* scrollbar */
@@ -69,7 +78,7 @@ body {
     margin: 2em auto;
     padding: 2em 2em 2em 2em;
     background: none;
-    color: #175541;
+    color: #6d5005;
     border-radius: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.2em;
@@ -94,7 +103,7 @@ body {
 .yep {
     height: 4em;
     width: 6.5em;
-    background: #175541;
+    background: #9f8f28;
     border: none;
     border-radius: 1em;
     color: aliceblue;
@@ -106,7 +115,7 @@ body {
 .nope {
     height: 4em;
     width: 6.5em;
-    background: #175541;
+    background: #9f8f28;
     border: none;
     border-radius: 1em;
     color: aliceblue;
@@ -118,20 +127,20 @@ body {
 .yep:hover{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.8);
-    color: #175541;
+    color: #9f8f28;
     transition: all ease 0.7s;
 }
 
 .nope:hover{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.8);
-    color: #175541;
+    color: #9f8f28;
     transition: all ease 0.7s;
 }
 
 .btOn {
     background: #d9eadc;
-    color: #175541;
+    color: #9f8f28;
     transition: all ease 0.2s;
 }
 
@@ -140,7 +149,7 @@ body {
     width: 8em;
     margin-top: 6em;
     margin-bottom: 10em;
-    background: #175541;
+    background: #9f8f28;
     border: none;
     border-radius: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -161,15 +170,17 @@ body {
 /* Beer panel */
 
 .beer {
-    position: fixed;
-    margin-bottom: 48em;
+    position: absolute;
+    top: 755px;
+    left: 50%;
+    transform: translateX(-50%);
     height: 90vh;
     width: 40vw;
     background: rgba(255, 255, 255);
     box-shadow: 1em 1em 2em rgb(0,0,0,0.8);
     border-radius: 3em 0 ;
     display:none;
-    z-index: 2;
+    z-index: 3;
 }
 
 .close{

@@ -1,4 +1,4 @@
-/* Buttons declaration */
+// Buttons declaration
 
 const yepA = document.getElementById("yepa");
 const yepB = document.getElementById("yepb");
@@ -9,7 +9,7 @@ const nopB = document.getElementById("nopb");
 const nopC = document.getElementById("nopc");
 const nopD = document.getElementById("nopd");
 
-/* Buttons event */
+// Buttons event
 
 yepA.addEventListener("click", function() {
     yepA.classList.toggle("btOn")
@@ -51,7 +51,7 @@ nopD.addEventListener("click", function() {
     yepD.classList.remove("btOn")
 });
 
-/* Beer Panel */
+// Beer Panel
 
 const result = document.querySelector(".result");
 const close = document.querySelector(".close");
@@ -63,6 +63,9 @@ const btaste = document.querySelector(".taste")
 const bcolor = document.querySelector(".color")
 const bgrad = document.querySelector(".grad")
 const bImg = document.querySelector(".beer-img")
+const gancio = document.querySelector(".inizio")
+
+// button control
 
 let arr1 = [null,null,null,null]
 const buttonY = [yepA, yepB, yepC, yepD]
@@ -86,14 +89,18 @@ function answerN(x,y) {
     console.log(y)
 }
 
+// result button
+
 result.addEventListener("click", function() {
     panel.style.display="block";
     blanket.style.display="block";
-    window.scrollTo(top);
+    window.scrollTo(0, 720);
     answerY(x = buttonY, y = arr1);
     answerN(x = buttonN, y = arr1);
     insert(arr1);
 });
+
+// close modal
 
 close.addEventListener("click", function() {
     yepA.classList.remove("btOn")
@@ -111,11 +118,13 @@ close.addEventListener("click", function() {
     panel.style.display="none";
     blanket.style.display="none";
     window.scrollTo({
-      top: 0,
+      top: 720,
       left: 0,
       behavior: "smooth"
     });
 });
+
+// birre list
 
 var birre = [
   {
@@ -247,6 +256,8 @@ var birre = [
     immagine: "url(img/Birre/Carlsberg.png)"
   },
 ]
+
+// fill modal with the right beer
 
 function fillModal(index) {
   bName.innerHTML = birre[index].nome
