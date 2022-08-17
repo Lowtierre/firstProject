@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 // Buttons declaration
 
 const yepA = document.getElementById("yepa");
@@ -53,16 +55,63 @@ nopD.addEventListener("click", function() {
 
 // Beer Panel
 
+function createPanel() {
+  const panel = document.createElement("div");
+  body.appendChild(panel);
+  panel.setAttribute('class', 'beer');
+  
+  createTable()
+}
+
+function createTable() {
+  const table1 = document.createElement("table");
+  table1.setAttribute('class', 'beer-table1');
+  const table2 = document.createElement("table");
+  table2.setAttribute('class', 'beer-table2');
+  var tables = [table1, table2];
+  for (i=0; i<tables.length; i++) {
+    const tr1 = document.createElement('tr');
+    const tr2 = document.createElement('tr');
+    tables[i].appendChild(tr1)
+    tables[i].appendChild(tr2)
+    const th1 = document.createElement('th');
+    const th2 = document.createElement('th');
+    tr1.appendChild(th1);
+    tr1.appendChild(th2)
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    tr2.appendChild(td1)
+    tr2.appendChild(td2)
+    }
+  
+
+
+  const bImg = document.createElement("div");
+  bImg.setAttribute('class', 'beer-image');
+  const bDescr = document.createElement("div");
+  bDescr.setAttribute('class', 'beer-description');
+  const bName = document.createElement("p");
+  bName.setAttribute('class', 'beer-name');
+  const btype = document.createElement("p");
+  btype.setAttribute('class', 'typo');
+  const btaste = document.createElement("p");
+  btaste.setAttribute('class', 'taste');
+  const bcolor = document.createElement("p");
+  bcolor.setAttribute('class', 'color');
+  const bgrad = document.createElement("p");
+  bgrad.setAttribute('class', 'grad');
+}
+
 const result = document.querySelector(".result");
 const close = document.querySelector(".close");
-const panel = document.querySelector(".beer");
+// const panel = document.querySelector(".beer");
 const blanket = document.querySelector(".blanket");
-const bName = document.querySelector(".beer-name")
-const btype = document.querySelector(".typo")
-const btaste = document.querySelector(".taste")
-const bcolor = document.querySelector(".color")
-const bgrad = document.querySelector(".grad")
-const bImg = document.querySelector(".beer-img")
+// const bName = document.querySelector(".beer-name")
+// const btype = document.querySelector(".typo")
+// const btaste = document.querySelector(".taste")
+// const bcolor = document.querySelector(".color")
+// const bgrad = document.querySelector(".grad")
+// const bImg = document.querySelector(".beer-img")
 const gancio = document.querySelector(".inizio")
 
 // button control
@@ -92,37 +141,38 @@ function answerN(x,y) {
 // result button
 
 result.addEventListener("click", function() {
-    panel.style.display="block";
-    blanket.style.display="block";
-    window.scrollTo(0, 720);
-    answerY(x = buttonY, y = arr1);
-    answerN(x = buttonN, y = arr1);
-    insert(arr1);
+  createPanel()
+  // panel.style.display="block";
+  blanket.style.display="block";
+  window.scrollTo(0, 720);
+  answerY(x = buttonY, y = arr1);
+  answerN(x = buttonN, y = arr1);
+  insert(arr1);
 });
 
 // close modal
 
-close.addEventListener("click", function() {
-    yepA.classList.remove("btOn")
-    yepB.classList.remove("btOn")
-    yepC.classList.remove("btOn")
-    yepD.classList.remove("btOn")
-    nopA.classList.remove("btOn")
-    nopB.classList.remove("btOn")
-    nopC.classList.remove("btOn")
-    nopD.classList.remove("btOn")
-    arr1[0] = null
-    arr1[1] = null
-    arr1[2] = null
-    arr1[3] = null
-    panel.style.display="none";
-    blanket.style.display="none";
-    window.scrollTo({
-      top: 720,
-      left: 0,
-      behavior: "smooth"
-    });
-});
+// close.addEventListener("click", function() {
+//     yepA.classList.remove("btOn")
+//     yepB.classList.remove("btOn")
+//     yepC.classList.remove("btOn")
+//     yepD.classList.remove("btOn")
+//     nopA.classList.remove("btOn")
+//     nopB.classList.remove("btOn")
+//     nopC.classList.remove("btOn")
+//     nopD.classList.remove("btOn")
+//     arr1[0] = null
+//     arr1[1] = null
+//     arr1[2] = null
+//     arr1[3] = null
+//     panel.style.display="none";
+//     blanket.style.display="none";
+//     window.scrollTo({
+//       top: 720,
+//       left: 0,
+//       behavior: "smooth"
+//     });
+// });
 
 // birre list
 
