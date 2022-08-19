@@ -131,6 +131,14 @@ var birre = [
     gradazione: "5 %",
     immagine: "url(img/Birre/Carlsberg.png)"
   },
+  {
+    nome: "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te",
+    tipo: "null",
+    gusto: "null",
+    colore: "null",
+    gradazione: "null",
+    immagine: "url(img/Birre/Birra_vuota.png)"
+  }
 ]
 
 // Buttons declaration
@@ -193,10 +201,18 @@ function createTable() {
 }
 
 function createPanel(index) {
-  
+
   const panel = document.createElement("div");
-  body.appendChild(panel);
   panel.setAttribute('class', 'beer');
+  body.appendChild(panel);
+
+  const close = document.createElement("button");
+  close.setAttribute('class', 'close');
+  panel.appendChild(close);
+
+  const ics = document.createElement("i");
+  ics.setAttribute('class', 'fa-solid fa-xmark');
+  close.appendChild(ics)
 
   const bImg = document.createElement("div");
   bImg.setAttribute('class', 'beer-img');
@@ -221,9 +237,11 @@ function createPanel(index) {
   const th2 = document.createElement('th');
   const div1 = document.createElement('div');
   div1.setAttribute('class', 'property');
+  div1.textContent = "TIPO"
   th1.appendChild(div1);
   const div2 = document.createElement('div');
   div2.setAttribute('class', 'property');
+  div2.textContent = "GUSTO"
   th2.appendChild(div2);
   tr1.appendChild(th1);
   tr1.appendChild(th2);
@@ -249,9 +267,11 @@ function createPanel(index) {
   const th4 = document.createElement('th');
   const div3 = document.createElement('div');
   div3.setAttribute('class', 'property');
+  div3.textContent = "COLORE"
   th3.appendChild(div3);
   const div4 = document.createElement('div');
   div4.setAttribute('class', 'property');
+  div4.textContent = "GRADI"
   th4.appendChild(div4);
   tr3.appendChild(th3);
   tr3.appendChild(th4);
@@ -272,11 +292,35 @@ function createPanel(index) {
   //fill modal
 
   bImg.style.backgroundImage = birre[index].immagine
-  bName.innerHTML = birre[index].nome
-  btype.innerHTML = birre[index].tipo
-  btaste.innerHTML = birre[index].gusto
-  bcolor.innerHTML = birre[index].colore
-  bgrad.innerHTML = birre[index].gradazione
+  bName.textContent = birre[index].nome
+  btype.textContent = birre[index].tipo
+  btaste.textContent = birre[index].gusto
+  bcolor.textContent = birre[index].colore
+  bgrad.textContent = birre[index].gradazione
+
+  // close modal
+
+  close.addEventListener("click", function() {
+  yepA.classList.remove("btOn")
+  yepB.classList.remove("btOn")
+  yepC.classList.remove("btOn")
+  yepD.classList.remove("btOn")
+  nopA.classList.remove("btOn")
+  nopB.classList.remove("btOn")
+  nopC.classList.remove("btOn")
+  nopD.classList.remove("btOn")
+  arr1[0] = null
+  arr1[1] = null
+  arr1[2] = null
+  arr1[3] = null
+  panel.remove()
+  blanket.style.display="none";
+  window.scrollTo({
+    top: 720,
+    left: 0,
+    behavior: "smooth"
+  });
+});
 }
 
 // button control
@@ -340,15 +384,10 @@ function insert(arr1) {
         createPanel(14)
       } else if (arr1[0] == false && arr1[1] == true && arr1[2] == true && arr1[3] == true) { 
         createPanel(15)
-      } //else if (arr1[0] == null || arr1[1] == null || arr1[2] == null || arr1[3] == null) {
-      // bName.style.fontSize = "1.2em";
-      // bName.innerHTML = "Devi rispondere a tutte le domande se vuoi sorseggiare la birra che fa per te";
-      // btype.innerHTML = "n/d";
-      // btaste.innerHTML = "n/d";
-      // bcolor.innerHTML = "n/d";
-      // bgrad.innerHTML = "n/d";
-      // bImg.style.backgroundImage = "url(img/Birre/Birra_vuota.png)";
-      // }
+      } else if (arr1[0] == null || arr1[1] == null || arr1[2] == null || arr1[3] == null) {
+        createPanel(16)
+        //bName.style.fontSize = "1.2em";
+      }
 }
 
 const result = document.querySelector(".result");
@@ -374,27 +413,5 @@ result.addEventListener("click", function() {
   insert(arr1);
 });
 
-// close modal
 
-// close.addEventListener("click", function() {
-//     yepA.classList.remove("btOn")
-//     yepB.classList.remove("btOn")
-//     yepC.classList.remove("btOn")
-//     yepD.classList.remove("btOn")
-//     nopA.classList.remove("btOn")
-//     nopB.classList.remove("btOn")
-//     nopC.classList.remove("btOn")
-//     nopD.classList.remove("btOn")
-//     arr1[0] = null
-//     arr1[1] = null
-//     arr1[2] = null
-//     arr1[3] = null
-//     panel.style.display="none";
-//     blanket.style.display="none";
-//     window.scrollTo({
-//       top: 720,
-//       left: 0,
-//       behavior: "smooth"
-//     });
-// });
 

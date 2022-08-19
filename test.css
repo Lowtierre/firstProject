@@ -8,14 +8,74 @@ body {
 }
 
 .formDiv {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
+    text-align: center;
     background-image: url(img/beerBalls.jpg);
     background-size: 260%;
     background-position: center 55%;
-    z-index: 0;
+    z-index: 2;
+    visibility:visible;
 }
 
+h2 {
+    margin: 4em auto 1em auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-date {
+    margin: 0 auto 0 auto;
+}
+
+.input-date {
+    width: 10em;
+    height: 6em;
+    padding: 0;
+    background: rgb(0,0,0,0.8);
+    color: white;
+    border: 4px solid black;
+    border-radius: 6px;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.error {
+    border: 4px solid rgb(138, 0, 0)
+}
+
+.enter {
+    margin: 0.5em auto 1em auto;
+    padding: 0;
+    width: 38em;
+    height: 8em;
+    border: 4px solid black;
+    border-radius: 6px;
+    background: rgb(0,0,0,0.8);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.enter:hover {
+    cursor: pointer;
+}
+
+.access-denied {
+    margin: 0 auto;
+    background-color: beige;
+    color: rgb(39, 8, 8);
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;   
+    font-weight: normal; 
+}
 /* header */
 
 .header {
@@ -170,10 +230,10 @@ body {
 /* Beer panel */
 
 .beer {
-    position: absolute;
+    position: relative;
     top: 755px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(25%);
     height: 90vh;
     width: 40vw;
     background: rgba(255, 255, 255);
