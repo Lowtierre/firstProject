@@ -14,9 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    background-image: url(img/beerBalls.jpg);
-    background-size: 260%;
-    background-position: center 55%;
+    background: #d9eadc;
     z-index: 2;
     visibility:visible;
 }
@@ -34,31 +32,34 @@ h2 {
 }
 
 .input-date {
-    width: 10em;
-    height: 6em;
+    width:160px;
+    height: 100px;
     padding: 0;
     background: rgb(0,0,0,0.8);
     color: white;
-    border: 4px solid black;
+    border: 2px solid black;
     border-radius: 6px;
-    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight:100;
     text-transform: uppercase;
     text-align: center;
 }
 
 .error {
-    border: 4px solid rgb(138, 0, 0)
+    border: 2px solid rgb(138, 0, 0)
 }
 
 .enter {
-    margin: 0.5em auto 1em auto;
+    margin: 5px auto 20px;
     padding: 0;
-    width: 38em;
-    height: 8em;
-    border: 4px solid black;
+    width: 500px;
+    height: 110px;
+    border: 2px solid black;
     border-radius: 6px;
     background: rgb(0,0,0,0.8);
     color: white;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -68,8 +69,11 @@ h2 {
 }
 
 .access-denied {
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
     margin: 0 auto;
-    background-color: beige;
+    background: none;
     color: rgb(39, 8, 8);
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -105,7 +109,7 @@ h2 {
     width: 100vw;
     height: 100vh;
     background: #d9eadc;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .blanket{
@@ -138,8 +142,9 @@ h2 {
     margin: 2em auto;
     padding: 2em 2em 2em 2em;
     background: none;
-    color: #6d5005;
+    color: #96bd9e;
     border-radius: 1em;
+    text-shadow: 0.05em 0 0.05em rgba(64, 71, 63, .7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.2em;
     font-weight: bold;
@@ -163,7 +168,7 @@ h2 {
 .yep {
     height: 4em;
     width: 6.5em;
-    background: #9f8f28;
+    background: #96bd9e;
     border: none;
     border-radius: 1em;
     color: aliceblue;
@@ -175,7 +180,7 @@ h2 {
 .nope {
     height: 4em;
     width: 6.5em;
-    background: #9f8f28;
+    background: #96bd9e;
     border: none;
     border-radius: 1em;
     color: aliceblue;
@@ -187,20 +192,20 @@ h2 {
 .yep:hover{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.8);
-    color: #9f8f28;
+    color: #96bd9e;
     transition: all ease 0.7s;
 }
 
 .nope:hover{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.8);
-    color: #9f8f28;
+    color: #96bd9e;
     transition: all ease 0.7s;
 }
 
 .btOn {
     background: #d9eadc;
-    color: #9f8f28;
+    color: #96bd9e;
     transition: all ease 0.2s;
 }
 
@@ -209,7 +214,7 @@ h2 {
     width: 8em;
     margin-top: 6em;
     margin-bottom: 10em;
-    background: #9f8f28;
+    background: #96bd9e;
     border: none;
     border-radius: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
