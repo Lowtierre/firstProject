@@ -194,7 +194,7 @@ nopD.addEventListener("click", function() {
     yepD.classList.remove("btOn")
 });
 
-// Beer Panel
+// CREA MODALE
 
 function createPanel(index) {
 
@@ -313,7 +313,7 @@ function createPanel(index) {
     panel.remove()
     blanket.style.display="none";
     window.scrollTo({
-      top: 720,
+      top: 0,
       left: 0,
       behavior: "smooth"
     });
@@ -323,40 +323,31 @@ function createPanel(index) {
   }
 }
 
-// button control
+// CONTROLLO RISPOSTE
 
 let arr1 = [null,null,null,null]
 const buttonY = [yepA, yepB, yepC, yepD]
 const buttonN = [nopA, nopB, nopC, nopD]
 
-function answerY(x,y) {
+function answer(x,y,z) {
   try{
     for (i=0; i<(x.length); i++) {
         if (x[i].classList.contains("btOn")) {
-            y[i] = true;
+            z[i] = true;
         }
     }
-  } catch(e){
-    alert('answerY' + e)
-  }
-    console.log(y)
-}
-
-function answerN(x,y) {
-  try{
-    for (i=0; i<(x.length); i++) {
-        if (x[i].classList.contains("btOn")) {
-            y[i] = false;
-        }
+    for (i=0; i<(y.length); i++) {
+      if (y[i].classList.contains("btOn")) {
+          z[i] = false;
+      }
     }
   } catch(e){
-    alert('answerN' + e)
+    alert('answer' + e)
   }
-    console.log(y)
+    console.log(z)
 }
 
-
-// fill modal with the right beer
+// RIEMPI MODALE CON LA GIUSTA BIRRA
 
 function insert(arr1) {
 
@@ -402,28 +393,14 @@ function insert(arr1) {
   }
 }
 
+// const close = document.querySelector(".close");
 const result = document.querySelector(".result");
-const close = document.querySelector(".close");
-// const panel = document.querySelector(".beer");
 const blanket = document.querySelector(".blanket");
-// const bName = document.querySelector(".beer-name")
-// const btype = document.querySelector(".typo")
-// const btaste = document.querySelector(".taste")
-// const bcolor = document.querySelector(".color")
-// const bgrad = document.querySelector(".grad")
-// const bImg = document.querySelector(".beer-img")
-const gancio = document.querySelector(".inizio")
 
-// result button
+// RISULTATO
 
 result.addEventListener("click", function() {
-  // panel.style.display="block";
   blanket.style.display="block";
-  window.scrollTo(0, 720);
-  answerY(x = buttonY, y = arr1);
-  answerN(x = buttonN, y = arr1);
+  answer(buttonY, buttonN, arr1);
   insert(arr1);
 });
-
-
-
